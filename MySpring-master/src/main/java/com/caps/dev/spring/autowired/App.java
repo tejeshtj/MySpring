@@ -1,6 +1,5 @@
-package spring;
+package com.caps.dev.spring.autowired;
 
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class App 
