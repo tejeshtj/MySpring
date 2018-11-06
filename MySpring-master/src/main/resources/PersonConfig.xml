@@ -4,12 +4,13 @@
 	xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
-	<bean id="person" class="com.caps.dev.java.spring.xml.Person">
-		<property name="name" value="Blake"/>
-		<property name="job" ref="job"></property>
-	</bean>	
-	
-	<bean id="job" 
-	class="com.caps.dev.java.spring.xml.SoftwareDeveloper"/>
-	
+	<bean id="person" class="com.caps.dev.spring.xml.Person">
+		<!-- <property name="name" value="Blake" />
+		<property name="job" ref="job"></property> -->
+		<constructor-arg value="tejesh"/>
+		<constructor-arg ref="job"/>
+	</bean>
+
+	<bean id="job" class="com.caps.dev.spring.xml.SoftwareDeveloper" />
+
 </beans>

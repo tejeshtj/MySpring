@@ -1,13 +1,18 @@
 package com.caps.dev.spring.autowired;
 
+import javax.inject.Inject;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Person {
 	private String name="Blake";
+//	@Autowired --this is similar to inject
+	@Inject  @Qualifier("softwareDeveloper")// qualifier helps in selecting a component to which it should be autowired with ,if we are having
 	
-	@Autowired
+	//two components that return the sam kind of object. and another way is to give @primary  to the component you want to wire with
 	private Job job;
 	
 	public String getName() {

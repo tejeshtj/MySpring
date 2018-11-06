@@ -13,5 +13,8 @@ public class App
 
 		System.out.println(p.getName());
 		p.getJob().job();
+		for(String bean:ctx.getBeanDefinitionNames()) {
+			System.out.println(bean);
+		}
 	}
 }
