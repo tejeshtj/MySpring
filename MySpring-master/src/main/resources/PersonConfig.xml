@@ -5,12 +5,18 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 	<bean id="person" class="com.caps.dev.spring.xml.Person">
-		<!-- <property name="name" value="Blake" />
-		<property name="job" ref="job"></property> -->
-		<constructor-arg value="tejesh"/>
-		<constructor-arg ref="job"/>
+		<!-- <property name="name" value="Blake" /> <property name="job" ref="job"></property> -->
+		<constructor-arg value="tejesh" />
+		<constructor-arg ref="job" />
 	</bean>
 
 	<bean id="job" class="com.caps.dev.spring.xml.SoftwareDeveloper" />
+	<bean id="data" class="com.caps.dev.spring.xml.Data">
+		<property name="msg" value="Life is tough so work hard" />
+		<property name="count"
+			value="#{T(System).currentTimeMillis()}" />
+		<property name="random" value="#{T(Math).random()*10}" />
+	</bean>
+
 
 </beans>

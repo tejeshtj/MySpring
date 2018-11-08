@@ -9,13 +9,23 @@ public class App
     	AnnotationConfigApplicationContext ctx = 
     		   new AnnotationConfigApplicationContext(AppConfig.class);
        Person p = ctx.getBean(Person.class,"person");
-       String[] beans=ctx.getBeanDefinitionNames();
+       System.out.println(p.hashCode());
+       
+       p = ctx.getBean(Person.class,"person");
+       System.out.println(p.hashCode());
+       
+       p = ctx.getBean(Person.class,"person");
+       System.out.println(p.hashCode());
+       
+       p = ctx.getBean(Person.class,"person");
+       System.out.println(p.hashCode());
+      /* String[] beans=ctx.getBeanDefinitionNames();
        for (String string : beans) {
 		System.out.println(string);
 	}
        System.out.println("number of  beans: "+ctx.getBeanDefinitionCount());
        System.out.println(p.getName());
-       p.getJob().job();
+       p.getJob().job();*/
        ctx.close();
     }
 }

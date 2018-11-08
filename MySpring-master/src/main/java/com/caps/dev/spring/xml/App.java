@@ -9,12 +9,12 @@ public class App
 	{
 		ApplicationContext ctx = 
 				new ClassPathXmlApplicationContext("/PersonConfig.xml");
-		Person p = ctx.getBean(Person.class,"person");
+		Data p = ctx.getBean(Data.class,"data");
 
-		System.out.println(p.getName());
-		p.getJob().job();
+		System.out.println(p);
+		/*p.getJob().job();
 		for(String bean:ctx.getBeanDefinitionNames()) {
 			System.out.println(bean);
-		}
+		}*/
 	}
 }
