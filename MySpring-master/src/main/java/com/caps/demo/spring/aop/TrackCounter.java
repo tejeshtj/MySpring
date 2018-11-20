@@ -1,5 +1,6 @@
 package com.caps.demo.spring.aop;
 
+import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
@@ -17,4 +18,12 @@ public class TrackCounter {
 	public void countTrack(int track) {
 		System.out.println("recording tracknumber: "+track);
 	}
+	
+@After("trackPlayed(track)")
+	
+	public void countTrack2(int track) {
+		System.out.println("tracknumber: "+track +" has been recorded");
+	}
+	
+	
 }
